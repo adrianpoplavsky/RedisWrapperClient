@@ -54,6 +54,7 @@ namespace RedisWrapperClient
 
         private async void button_Click(object sender, RoutedEventArgs e)
         {
+            tbTimeTaken.Text = "Working...";
             var startTime = DateTime.Now;
 
             try
@@ -94,6 +95,42 @@ namespace RedisWrapperClient
 
         private async void btsetCall_Click(object sender, RoutedEventArgs e)
         {
+            tbTimeTaken.Text = "Working...";
+
+            var entity = txtsetEntityName.Text;
+            var content = txtsetContent.Text;
+            var startTime = DateTime.Now;
+
+            try
+            {
+                var uri = new Uri(string.Format("http://rediswrapper.azurewebsites.net/set/{0}", entity));
+                var request = (HttpWebRequest)WebRequest.Create(uri);
+                var postContent = Encoding.UTF8.GetBytes(content);
+
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                request.Accept = "application/json";
+
+                using (var requestStream = await request.GetRequestStreamAsync())
+                {
+                    requestStream.Write(postContent, 0, postContent.Length);
+                }
+
+                using (var response = (HttpWebResponse)await request.GetResponseAsync()) { }
+            }
+            catch (Exception ex)
+            {
+                tbsetTimeTaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms. Error: " + ex.Message;
+                return;
+            }
+
+            tbsetTimeTaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms.";
+        }
+
+        private async void tbsetHashCall_Click(object sender, RoutedEventArgs e)
+        {
+            tbTimeTaken.Text = "Working...";
+
             var entity = txtsetEntityName.Text;
             var content = txtsetContent.Text;
             var startTime = DateTime.Now;

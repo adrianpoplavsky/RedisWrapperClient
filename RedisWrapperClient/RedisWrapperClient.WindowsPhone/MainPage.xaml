@@ -13,10 +13,10 @@
             <PivotItem Header="Get">
                 <Grid>
                     <StackPanel>
-                        <TextBlock x:Name="tbTimeTaken" ></TextBlock>
+                        <TextBlock x:Name="tbTimeTaken"  TextWrapping="Wrap" Height="49"  ></TextBlock>
                         <TextBox x:Name="txtEntity" Text="employee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="251" />
                         <TextBox x:Name="txtIdentifier" Text="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="69" />
-                        <Button x:Name="button" Content="Obtener" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_Click"/>
+                        <Button x:Name="button" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Click="button_Click"/>
                         <ListView x:Name="listView" HorizontalAlignment="Left" Height="373" VerticalAlignment="Top" Width="277"/>
                     </StackPanel>
                 </Grid>
@@ -24,10 +24,20 @@
             <PivotItem Header="Set">
                 <Grid>
                     <StackPanel>
-                        <TextBlock x:Name="tbsetTimeTaken" ></TextBlock>
+                        <TextBlock x:Name="tbsetTimeTaken" TextWrapping="Wrap" Height="49"  ></TextBlock>
                         <TextBox x:Name="txtsetEntityName" Text="employee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="251" />
                         <TextBox x:Name="txtsetContent" VerticalAlignment="Top" Height="114" Margin="0,0,9.667,0" TextWrapping="Wrap" />
-                        <Button x:Name="btsetCall" Content="Obtener" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btsetCall_Click" />
+                        <Button x:Name="btsetCall" Content="Send" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btsetCall_Click" />
+                    </StackPanel>
+                </Grid>
+            </PivotItem>
+            <PivotItem Header="Set Hash">
+                <Grid>
+                    <StackPanel>
+                        <TextBlock x:Name="tbsethashtimetaken" TextWrapping="Wrap" Height="49"   ></TextBlock>
+                        <TextBox x:Name="tbsetHashEntityName" Text="employee" HorizontalAlignment="Left" VerticalAlignment="Top" Width="251" />
+                        <TextBox x:Name="tbsetHashContent" VerticalAlignment="Top" Height="114" Margin="0,0,9.667,0" TextWrapping="Wrap" />
+                        <Button x:Name="tbsetHashCall" Content="Send" HorizontalAlignment="Left" VerticalAlignment="Top" Click="tbsetHashCall_Click"   />
                     </StackPanel>
                 </Grid>
             </PivotItem>

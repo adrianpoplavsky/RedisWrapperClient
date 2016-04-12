@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisWrapperClient.WindowsP
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		RedisWrapperClient\RedisWrapperClient.Shared\App1.Shared.projitems*{81c6cebc-00b0-4570-8d23-0d2ec7d6ef00}*SharedItemsImports = 13
+		RedisWrapperClient\RedisWrapperClient.Shared\RedisWrapperClient.Shared.projitems*{81c6cebc-00b0-4570-8d23-0d2ec7d6ef00}*SharedItemsImports = 13
 		RedisWrapperClient\RedisWrapperClient.Shared\RedisWrapperClient.Shared.projitems*{1c30691e-e68e-40d3-8119-1bdc2a7e0367}*SharedItemsImports = 4
 		RedisWrapperClient\RedisWrapperClient.Shared\RedisWrapperClient.Shared.projitems*{9cf5e464-6fbd-4750-807d-c1431459a8ae}*SharedItemsImports = 4
 	EndGlobalSection
