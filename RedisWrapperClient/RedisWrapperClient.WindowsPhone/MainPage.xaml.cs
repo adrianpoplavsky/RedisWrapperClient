@@ -95,7 +95,7 @@ namespace RedisWrapperClient
 
         private async void btsetCall_Click(object sender, RoutedEventArgs e)
         {
-            tbTimeTaken.Text = "Working...";
+            tbsetTimeTaken.Text = "Working...";
 
             var entity = txtsetEntityName.Text;
             var content = txtsetContent.Text;
@@ -129,7 +129,7 @@ namespace RedisWrapperClient
 
         private async void tbsetHashCall_Click(object sender, RoutedEventArgs e)
         {
-            tbTimeTaken.Text = "Working...";
+            tbsethashtimetaken.Text = "Working...";
 
             var entity = txtsetEntityName.Text;
             var content = txtsetContent.Text;
@@ -154,11 +154,11 @@ namespace RedisWrapperClient
             }
             catch (Exception ex)
             {
-                tbsetTimeTaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms. Error: " + ex.Message;
+                tbsethashtimetaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms. Error: " + ex.Message;
                 return;
             }
 
-            tbsetTimeTaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms.";
+            tbsethashtimetaken.Text = "TimeTaken: " + (DateTime.Now - startTime).Milliseconds + "ms.";
         }
     }
 }
